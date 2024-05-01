@@ -1,0 +1,25 @@
+.backgroundformilestone{
+    background-color: antiquewhite;
+    border-radius: 30px;
+    margin-left: px;
+    margin-right: px;
+    
+}
+.cardimage{
+    /* height: 10em; */
+    width: 100%;
+    margin-top: 80px;
+    
+    justify-content: center;
+    mix-blend-mode: multiply;
+}
+.cardimage2{
+    /* height: 15em; */
+    width: 100%;
+    justify-content: center;
+   
+    mix-blend-mode: multiply;
+}
+.mixcard{
+    background-color: lightgray;
+}

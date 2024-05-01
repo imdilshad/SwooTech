@@ -1,0 +1,223 @@
+
+
+
+.back{
+    background-color:rgb(234, 227, 227);
+    border-radius: 100px;
+    height: 35px;
+    width: 35px;
+}
+.back2{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(48, 232, 48);
+    border-radius: 100px;
+    
+    
+    
+}
+.back3{
+  border: none;
+  
+
+
+}
+.bo1{
+    border: 10px solid white;
+    border-radius: 40px;
+
+}
+.bak{
+    background-color: rgb(131, 208, 15);
+}
+.back4{
+    background-color: white;
+}
+
+.green{
+    color: green;
+}
+.font{
+font-size: small;
+}
+
+.fo{
+    font-size:large;
+}
+.but{
+    background-color: white;
+    color: green;
+    border: none;
+}
+.he{
+    height: 17px;
+    width: 35px;
+}
+.bbg{
+    background-color: gray;
+    border-radius: 20px;
+}
+.te{
+    height: 20;
+    color: gray;
+}
+.image{
+    width: 90%;
+
+    border-radius: 20px;
+}
+.bgg{
+    background-color: rgb(238, 234, 234);
+    border-radius: 10px;
+
+}
+.map{
+    width: 100%;
+    height: 400px;
+    
+}
+.border{
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.bggg{
+    background-color: rgb(204, 190, 190);
+    border-radius: 10px;
+}
+
+.bor{
+    border: 6px solid gray;
+}
+
+.im1{
+width: 80%;
+    
+}
+
+.leadership{
+    
+    width: 15vw;
+    height: 40vh;
+
+}
+.ba{
+    background-color: greenyellow;
+    border-radius: 20px;
+    height: 70px;
+}
+
+.bordernone{
+    border: none;
+    border-radius: 30px;
+}
+.heart{
+    background-color: gray;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+}
+.bd{
+    border-radius: 12px;
+    border: 2px solid green;
+}
+
+.image3{
+    height: 100%;
+    width: 40vh;
+
+
+}
+
+.tik{
+    background-color: rgb(179, 204, 179);
+    align-items: center;
+    border-radius: 20px;
+}
+.image4{
+background-image: url(/src/Components/images/3.png);
+border-radius: 20px;
+
+   
+}
+
+.image5{
+    background-image: url(/src/Components/images/banner1.png.png);
+    border-radius: 20px;
+    
+}
+.bggreen{
+    background-image: url(/src/Components/images/green.png);
+    border-radius: 20px;
+}
+
+.ss{
+    background-color: aqua;
+    color: aqua;
+}
+.ss1{
+    background-color: salmon;
+    color:salmon;
+}
+.ss2{
+    background-color:red;
+    color:red;
+}
+
+.ss3{
+
+    width: 100%;
+    border-radius: 20px;
+    border: 10px solid white;
+}
+
+.pag{
+    border: 1px solid gray ;
+    border-radius: 5px;
+    width: 35px;
+    
+}
+
+.m{
+    display: flex;
+}
+
+.he2{
+    flex-direction: row;
+    align-items: flex-start;
+}
+.phonetab{
+    flex-direction: row;
+}
+
+.s{
+    width: 100%;}
+    .s2{
+  flex-direction: row;
+
+    }
+
+
+.about .col-4 {
+    text-align: center;
+}
+
+
+
+
+
+.imagee{
+    height: 400px;
+}
+.abhi{
+    height: 250px;
+width: 370px;
+border-radius: 20px;
+}
+.im1{
+    width: 100%;
+    height: 500px;
+}
+
+
+  

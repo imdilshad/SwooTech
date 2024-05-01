@@ -1,0 +1,88 @@
+.text{
+    color:green;
+}
+.te{
+    color: lightgray;
+}
+.backgroundforhomelast{
+    background-color: rgb(169, 198, 206);
+    border-radius: 10px;
+
+}
+
+.background{
+    background-color: rgb(171, 177, 179);
+    border-radius: 10px;
+
+
+}
+.mixhomelast{
+    height: 10em;
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+
+
+.backforhomelast{
+    background-image: url('../images/Homelast/c_ban1.png.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.backforhomelast2{
+background-image: url('../images/Homelast/c_ban2.png.jpeg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+border-radius: 10px;
+
+}
+.backgroundforhomelast2{
+    background-color: rgb(207, 200, 193);
+    border-radius: 10px;
+
+    
+
+
+}
+
+.backforhomelast3{
+    background-image: url('../images/Homelast/i5.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    
+    }
+    .backforhomelast4{
+        background-image: url('../images/Homelast/Link (1).jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        
+        
+    
+    
+    }
+    .image-control{
+        height: 10em;
+        width: 100%;
+        mix-blend-mode: multiply;
+
+    }
+    .bgimg3{
+        background-image: url('./images/Homelast/Link.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        
+        
+        
+        }
+        .im{
+            height: 100px;
+        width: 200px;       }

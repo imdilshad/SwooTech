@@ -1,0 +1,40 @@
+.btn1{
+    background-color: rgb(23, 202, 23);
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+}
+
+.page-btn{
+    border: 2px solid rgb(194, 186, 186);
+    border-radius: 5px;
+}
+
+
+
+.cross{
+    height: 55px;
+    width: 55px;
+    background-color: rgb(238, 202, 233);
+    border-radius: 100px;
+}
+
+.cross1{
+    height: 55px;
+    width: 55px;
+    background-color: rgb(194, 186, 186);
+    border-radius: 100px;
+}
+
+.freshop{
+    color: rgb(34, 212, 34);
+    border: none;
+    border-radius: 10px;
+}
+
+@media (max-width:767px) {
+    .cross ,.cross1{
+        display: none;
+    }
+}

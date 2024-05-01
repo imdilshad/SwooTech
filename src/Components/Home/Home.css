@@ -1,0 +1,155 @@
+.header1{
+    background-color: rgb(219, 219, 71);
+}
+.text-grey{
+    color: lightgray;
+   
+  }
+    .home-hero{
+  /* background-image: url('/src/Components/images/hero.jpg'); */
+  background-size:contain ;
+  background-position: right;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  height: 350px;
+    }
+
+    .list{
+      list-style: none;
+    }
+
+
+.hero-image{
+  height: 340px;
+}
+
+
+
+.dell-banner{
+    background-color: rgb(54, 185, 142);
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+.hero-background{
+    background-color: bisque;
+}
+.img{
+    height: 60vh;
+    mix-blend-mode: multiply;
+    
+}
+.text-lightgreen{
+    color:rgb(54, 185, 142) ;
+}
+.hpimage-background{
+    background-image: url('../images/opi.jpeg');
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dellimage-background{
+    background-image: url('../images/opi1.jpeg');
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.im{
+    width: 100%;
+    height: 200px;
+}
+.image{
+    width: 100%;
+}
+.borderforhome{
+    border: 3px solid lightgray;
+    border-radius: 10px;
+}
+.background-gift{
+    background-color: bisque;
+}
+.image2{
+    width: 100%;
+    height: 10vh;
+
+}
+
+
+.head{
+  mix-blend-mode: multiply;
+  
+}
+@media only screen and (max-width: 767px) {
+
+  
+  .home-hero{
+    background-image: url('/src/Components/images/hero.jpg');
+    background-size: contain;
+    height: 250px;
+      }
+  
+      .hero-image{
+        display: none;
+      }
+    
+      
+    
+
+  
+    
+  
+  
+  
+   
+  
+   
+  
+    .bor {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+    }
+  
+    .image {
+      width: 100%;
+      height: auto;
+    }
+  
+   
+  
+   
+  
+   
+  
+    .bgc {
+      background-color: #f9f9f9;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .backfor{
+    mix-blend-mode: multiply;
+ }
+  .imagecontrol{
+    
+    
+    width: 100%;
+    height: 10em;
+  }
+  .imageadjust{
+    height: 100px;
+    width: auto;
+    mix-blend-mode:multiply;
+  }
+
+  .font-arrival{
+    height: auto;
+    width: 120px;
+  }
+  .product-card{
+    height: 250px;
+  }
+  .image-card{
+    height: 100px;
+    width: 180px;
+  }

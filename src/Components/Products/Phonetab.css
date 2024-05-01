@@ -1,0 +1,27 @@
+
+.product-hero1{
+ background-image: url('../images/3.png');
+ background-position: center;
+ background-size: cover;
+}
+.product-hero2{
+    background-image: url('/src/Components/images/banner1.png.png');
+    background-position: center;
+    background-size: cover;
+    
+}
+.pag{
+    border: none;
+    outline: none;
+}
+.product-image{
+height: 250px;
+}
+@media (max-width:767px){
+    .product-hero2{
+        height: 200px;
+    }
+    .Bycategory{
+        display: none;
+    }
+}
