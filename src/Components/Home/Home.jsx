@@ -440,10 +440,10 @@ const Home = () => {
                     <div className='col-6'>
                         <div className='row '>
                             <div className='col-6 d-flex justify-content-end'>
-                                <h5> <span class="badge text-bg-dark">New</span></h5>
+                                <h5 className="badge text-bg-dark" >New</h5>
                             </div>
                             <div className='col-6'>
-                                <h5><span class="badge text-bg-dark">Gift</span></h5>
+                                <h5><span className="badge text-bg-dark">Gift</span></h5>
                             </div>
                             <div><img className='image mt-5' src={i10} alt='a' /></div>
 
@@ -486,8 +486,8 @@ const Home = () => {
                     <b>DYNAMIC SPORTS 650ET
                         Electric Scooter - Yellow</b>
                     <div className='row'>
-                        <h5 className='col-6 text-end'><span class="badge text-bg-dark">new</span></h5>
-                        <h5 className='col-6'><span class="badge text-bg-dark">pre order</span></h5>
+                        <h5 className='col-6 text-end'><span className="badge text-bg-dark">new</span></h5>
+                        <h5 className='col-6'><span className="badge text-bg-dark">pre order</span></h5>
                     </div>
                     <div >
                         <img className='imagecontrol' src={i1} alt='a' />
@@ -508,8 +508,8 @@ const Home = () => {
                     <b>DYNAMIC SPORTS 650ET
                         Electric Scooter - Yellow</b>
                     <div className='row'>
-                        <h5 className='col-6 text-end'><span class="badge text-bg-dark">new</span></h5>
-                        <h5 className='col-6'><span class="badge text-bg-dark">pre order</span></h5>
+                        <h5 className='col-6 text-end'><span className="badge text-bg-dark">new</span></h5>
+                        <h5 className='col-6'><span className="badge text-bg-dark">pre order</span></h5>
                     </div>
                     <div >
                         <img className='imagecontrol' src={i5} alt='a' />
@@ -532,8 +532,8 @@ const Home = () => {
                     <b>DYNAMIC SPORTS 650ET
                         Electric Scooter - Yellow</b>
                     <div className='row'>
-                        <h5 className='col-6 text-end'><span class="badge text-bg-dark">new</span></h5>
-                        <h5 className='col-6'><span class="badge text-bg-dark">pre order</span></h5>
+                        <h5 className='col-6 text-end'><span className="badge text-bg-dark">new</span></h5>
+                        <h5 className='col-6'><span className="badge text-bg-dark">pre order</span></h5>
                     </div>
                     <div >
                         <img className='imagecontrol' src={i6} alt='a' />
@@ -567,10 +567,10 @@ const Home = () => {
                     <div className='col-6'>
                         <div className='row'>
                             <div className='col-6 d-flex justify-content-end'>
-                                <h5> <span class="badge text-bg-dark">New</span></h5>
+                                <h5> <span className="badge text-bg-dark">New</span></h5>
                             </div>
                             <div className='col-6'>
-                                <h5><span class="badge text-bg-dark">Gift</span></h5>
+                                <h5><span className="badge text-bg-dark">Gift</span></h5>
                             </div>
                             <div><img className='image' src={i7} alt='a' /></div>
 
@@ -613,8 +613,8 @@ const Home = () => {
                     <b>DYNAMIC SPORTS 650ET
                         Electric Scooter - Yellow</b>
                     <div className='row'>
-                        <h5 className='col-6 text-end'><span class="badge text-bg-dark">new</span></h5>
-                        <h5 className='col-6'><span class="badge text-bg-dark">pre order</span></h5>
+                        <h5 className='col-6 text-end'><span className="badge text-bg-dark">new</span></h5>
+                        <h5 className='col-6'><span className="badge text-bg-dark">pre order</span></h5>
                     </div>
                     <div >
                         <img className='imagecontrol' src={i8} alt='a' />
@@ -635,8 +635,8 @@ const Home = () => {
                     <b>DYNAMIC SPORTS 650ET
                         Electric Scooter - Yellow</b>
                     <div className='row'>
-                        <h5 className='col-6 text-end'><span class="badge text-bg-dark">new</span></h5>
-                        <h5 className='col-6'><span class="badge text-bg-dark">pre order</span></h5>
+                        <h5 className='col-6 text-end'><span className="badge text-bg-dark">new</span></h5>
+                        <h5 className='col-6'><span className="badge text-bg-dark">pre order</span></h5>
                     </div>
                     <div >
                         <img className='imagecontrol' src={i9} alt='a' />
@@ -659,8 +659,8 @@ const Home = () => {
                     <b>DYNAMIC SPORTS 650ET
                         Electric Scooter - Yellow</b>
                     <div className='row'>
-                        <h5 className='col-6 text-end'><span class="badge text-bg-dark">new</span></h5>
-                        <h5 className='col-6'><span class="badge text-bg-dark">pre order</span></h5>
+                        <h5 className='col-6 text-end'><span className="badge text-bg-dark">new</span></h5>
+                        <h5 className='col-6'><span className="badge text-bg-dark">pre order</span></h5>
                     </div>
                     <div >
                         <img className='imagecontrol' src={i2} alt='a' />

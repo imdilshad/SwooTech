@@ -3,6 +3,8 @@ import { FaSearch } from "react-icons/fa";
 import './Header3.css'
 import { IoMdOpen } from 'react-icons/io';
 import { Nav } from 'react-bootstrap';
+import{NavLink} from 'react-router-dom' 
+
 
 
 const Header3 = () => {
@@ -54,9 +56,9 @@ const Header3 = () => {
 
 
       <div className='d-flex justify-content-evenly container-fluid fw-bold  search-links' >
-      <Nav.Link  className='Navbar-topLine' href="/phonetab">FREE SHIPPING OVER $199</Nav.Link>
-      <Nav.Link className='Navbar-topLine' href="/multipage">30 DAYS MONEY BACK </Nav.Link>
-      <Nav.Link className='Navbar-topLine' href="/related">100% SECURE PAYMENT</Nav.Link>
+      <NavLink  className='Navbar-topLine nav-link' to={'/'} >FREE SHIPPING OVER $199</NavLink>
+      <NavLink className='Navbar-topLine nav-link' to={'/'} >30 DAYS MONEY BACK </NavLink>
+      <NavLink className='Navbar-topLine nav-link' to={'/'} >100% SECURE PAYMENT</NavLink>
       </div>
       
     </nav>

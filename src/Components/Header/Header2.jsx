@@ -6,11 +6,30 @@ import logo from '../images/Screenshot 2024-04-01 123837.png'
 import { IoIosHeartEmpty } from "react-icons/io";
 import './Header2.css'
 import { IoBag } from "react-icons/io5";
-import{NavLink} from 'react-router-dom' 
+import{Navigate, NavLink, useNavigate} from 'react-router-dom' 
+import {useSelector,useDispatch} from 'react-redux'
+import { remove } from '../../Store/tokenSlice';
+import { removeUser } from '../../Store/UserSlice';
+
+
+
 
 
 
 function Header2() {
+  const token =localStorage.getItem('acessToken')
+  // console.log(token)
+  const userData=useSelector((state)=>state.User)
+ 
+  const  [User] =userData
+  const navigate=useNavigate()
+  const dispatch=useDispatch()
+  const handleLogout=()=>{
+    localStorage.removeItem('acessToken');
+    dispatch(remove(token))
+    dispatch(removeUser(User))
+    navigate('/login')
+  }
   return (
     <Navbar expand="lg" className="bg-body-tertiary ">
       <div className='container-fluid '>
@@ -61,8 +80,11 @@ function Header2() {
             </NavDropdown>
 
             <NavLink  className='nav-link' to={"/Contact"}>CONTACT</NavLink>
-            <NavLink className='d-md-none nav-link' to={"/login"}>Login</NavLink>
+            {token?<button className='d-md-none nav-link' onClick={handleLogout}>Log Out</button>:<div>
+              <NavLink className='d-md-none nav-link' to={"/login"}>Login</NavLink>
             <NavLink className='d-md-none nav-link' to={"/signup"}>Sign UP</NavLink>
+            </div> }
+
 
 
 
@@ -78,16 +100,19 @@ function Header2() {
              </NavLink>
         </div>
         
+        {token?<button className='btn button-color Navbar-topLine' onClick={handleLogout}>Log Out</button>:
         <div className='mx-2 Navbar-topLine '>
-          <span className='text-start fw-bold'>welcome  
-          <div className='d-flex'>
-          <NavLink   to={"/login"} className='nav-link' >
-            <h6>LOG IN</h6> </NavLink>
-          <NavLink className='nav-link' to={"/signup"}>
-            <h6>/REGISTER</h6> </NavLink>
-          </div>
-            </span>
+        <span className='text-start fw-bold'>welcome  
+        <div className='d-flex'>
+        <NavLink   to={"/login"} className='nav-link' >
+          <h6>LOG IN</h6> </NavLink>
+        <NavLink className='nav-link' to={"/signup"}>
+          <h6>/REGISTER</h6> </NavLink>
         </div>
+          </span>
+      </div> }
+
+       
 
         <div className='d-flex   align-items-center  Navbar-topLine '>
          

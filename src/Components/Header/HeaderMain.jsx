@@ -10,7 +10,6 @@ function HeaderMain() {
     <div>
   <Header1/>
   <Header2/>
-  {/* <Headers/> */}
   <Header3/>
   <Header4/>
     </div>

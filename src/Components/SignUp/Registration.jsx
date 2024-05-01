@@ -59,7 +59,7 @@ const Registration = () => {
     
         (async()=>{
             try { 
-              const res = await axios.post('https://ecommbackend-f6t0.onrender.com/api/v1/user/register',formData)
+              const res = await axios.post('/api/v1/user/register',formData)
               console.log("res : ",res.data)
               const data = await res.data;
               navigate('/login')

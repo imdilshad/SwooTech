@@ -9,6 +9,7 @@ import { add } from '../../Store/tokenSlice';
 import { addUser } from '../../Store/UserSlice';
 
 
+
  const Login = () => {
   const dispatch=useDispatch();
   
@@ -50,7 +51,7 @@ import { addUser } from '../../Store/UserSlice';
   
       (async()=>{
           try { 
-            const res = await axios.post('https://ecommbackend-f6t0.onrender.com/api/v1/user/login',formData)
+            const res = await axios.post('/api/v1/user/login',formData)
             console.log("res : ",res.data)
             const data = await res.data;
             if (res) {
@@ -59,6 +60,7 @@ import { addUser } from '../../Store/UserSlice';
             } else {
               throw new Error('Failed to register user');
             }
+            localStorage.setItem('acessToken',data.data.accessToken)
             dispatch(add(data.data.accessToken));
             dispatch(addUser(data.data.user));
             if(data.message=='User logged in Successfully'){

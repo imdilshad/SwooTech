@@ -27,7 +27,7 @@ useEffect(()=>{
     stock: '',
     category: '',
     mainImage: '',
-    subImage: '',
+    subImages: '',
   });
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +57,7 @@ useEffect(()=>{
 
     (async()=>{
         try { 
-          const res = await axios.post('https://ecommbackend-f6t0.onrender.com/api/v1/product/',formData)
+          const res = await axios.post('/api/v1/product/',formData)
           console.log("res : ",res.data)
           const data = await res.data;
           if (res) {

@@ -165,37 +165,37 @@ export const Homelast = () => {
 
                 <div className='col-md-4 row'>
                     <img className='col-md-6 im' src={a1} alt='a' style={{borderRadius:20}} />
-                    <p className='col-md-6 text-center '><b> Omicron in Kids: Here’s
+                    <span className='col-md-6 text-center '><b> Omicron in Kids: Here’s
                         what parents should know
                     </b>
                         <p className='row mt-3'>45 Minutes ago in Experience</p>
-                    </p>
+                    </span>
 
                     <hr />
                     <div className='row '>
                         <img className='col-md-6 im' src={a2} alt='a' />
-                        <p className='col-md-6'><b>Fun facts about ios
+                        <span className='col-md-6'><b>Fun facts about ios
                         </b>
                             <p className='row mt-3'>1 Day ago in Life Style</p>
-                        </p>
+                        </span>
 
                     </div>
 
                 </div>
                 <div className='col-md-4 row'>
                     <img className='col-6 im' src={a3} alt='a' />
-                    <p className='col-md-6 text-center '><b> Insight into dadliness
+                    <span className='col-md-6 text-center '><b> Insight into dadliness
                     </b>
                         <p className='row mt-3 mb-5'>2 Days ago in inventory</p>
-                    </p>
+                    </span>
 
                     <hr />
                     <div className='row '>
                         <img className='col-md-6 im' src={a4} alt='a' />
-                        <p className='col-md-6'><b>best technology product
+                        <span className='col-md-6'><b>best technology product
                         </b>
                             <p className='row mt-3'>2 Days ago in Stock</p>
-                        </p>
+                        </span>
 
                     </div>
 
