@@ -32,10 +32,9 @@ function App() {
 (async()=>{
 
 try {
-  let response=await axios.get('/api/v1/test/auth').then(res=>res.data)
-console.log(response)
+  let response=await axios.get('/api/v1/healthCheck').then(res=>res.data)
 } catch (error) {
-  error.response.data.message
+  console.log(error.response.data.message)
 }
 })()
 

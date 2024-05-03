@@ -8,54 +8,83 @@ import {useSelector} from 'react-redux'
 
 function Admin() {
   const [isLogged,setIsLogged]=useState(false)
+  const [category,setCategory]=useState([])
   const userData=useSelector((state)=>state.User)
   const  [User] =userData
   const navigate=useNavigate()
+
+  const handleCategory= async()=>{
+    try {
+      let response=(await axios.get('/api/v1/category/?page=1&limit=10')).data
+      setCategory(response?.data?.categories)
+      console.log(category)
+    } catch (error) {
+      console.log('this is the error',error.response.data.message)
+    }
+    }
 useEffect(()=>{
   if(User?.role=='ADMIN'){
     setIsLogged(true)
+    handleCategory()
   }
   else{
     navigate('/login')
   }
 },[])
 
-  const [formData, setFormData] = useState({
-    name: '',
-    description: '',
-    price: '',
-    stock: '',
-    category: '',
-    mainImage: '',
-    subImages: '',
-  });
+const [name, setName] = useState('');
+const [description, setDescription] = useState('');
+const [stock, setStock] = useState(0);
+const [price, setPrice] = useState(0);
+const [mainImage, setMainImage] = useState(null);
+
+
+const handleChange = (e) => {
+  const selectedFile = e.target.files[0];
+  setMainImage(selectedFile);
+};
+
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(null);
 
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
+  // const handleChange = (event) => {
+  //   const { name, value, files } = event.target;
+  //   setFormDaata((prevData) => ({
+  //     ...prevData,
+  //     [name]: files ? files[0] : value, // Handle file uploads and other input types
+  //   }));
+  // };
 
-  const handleSubmit = (event) => {
-    console.log(formData)
+  
+  const handleSubmit = async(event) => {
     event.preventDefault();
     setErrors({}); // Clear previous errors
     setSuccessMessage(null);
     setIsLoading(true);
-
+    
     const { email, password } = formData;
-
+    
     let newErrors = {};
-   
-
+    
+    
     setErrors(newErrors);
     if (Object.keys(newErrors).length !== 0) {
-    setIsLoading(false)
+      setIsLoading(false)
     }
     if (Object.keys(newErrors).length === 0) {
+      
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('category', category);
+      formData.append('description', description);
+      formData.append('stock', stock);
+      formData.append('price', price);
+      formData.append('mainImage', mainImage);
+      console.log(formData)
 
-    (async()=>{
+  
+    
         try { 
           const res = await axios.post('/api/v1/product/',formData)
           console.log("res : ",res.data)
@@ -71,6 +100,7 @@ useEffect(()=>{
           }
         } catch (error) {
           console.log('this is the error',error)
+          console.log('this is the error',error.response.data.message)
           if(error.response.data.message==`User with this email doesn't exits.`){
             newErrors.email = "User with this email doesn't exits.";
           }
@@ -85,7 +115,7 @@ useEffect(()=>{
 
          
         }
-      })()
+      
     } 
   };
   return (
@@ -98,7 +128,7 @@ useEffect(()=>{
      id="name"
      name='name'
      onChange={handleChange}
-     value={formData.name}
+     
      />
   </div>
   <div className="col-md-6">
@@ -108,7 +138,7 @@ useEffect(()=>{
      id="description"
      name='description'
      onChange={handleChange}
-     value={formData.description}
+     
      />
   </div>
  
@@ -120,8 +150,22 @@ useEffect(()=>{
        placeholder="category"
        onChange={handleChange}
        name='category'
-       value={formData.category}
+       
        />
+       {/* <select className="form-select" name='category' value={formData.category} onChange={handleChange} aria-label="Default select example">
+  {category.map((cate)=>{
+    return(
+      <option value={cate._id}
+       key={cate._id}
+       onChange={handleChange}
+       >{cate.name}
+      
+      </option>
+    )
+  })}
+  
+  
+</select> */}
   </div>
   <div className="col-4">
     <label htmlFor="price" className="form-label">Price</label>
@@ -131,7 +175,7 @@ useEffect(()=>{
      placeholder="Price"
      onChange={handleChange}
      name='price'
-     value={formData.price}
+     
      />
   </div>
   <div className="col-4">
@@ -140,7 +184,7 @@ useEffect(()=>{
      className="form-control "
       id="stock"
       onChange={handleChange}
-      value={formData.stock}
+      
       name='stock'
       />
   </div>
@@ -150,22 +194,25 @@ useEffect(()=>{
      className="form-control "
       id="mainImage"
       name='mainImage'
-      value={formData.mainImage}
+      accept="image/*"
+      // value={formData.mainImage}
       onChange={handleChange}
       />
   </div>
-  <div className="col-md-2">
+  {/* <div className="col-md-2">
     <label htmlFor="subImage" className="form-label">Sub Images</label>
     <input type="file"
      className="form-control "
       id="subImage"
       name='subImage'
       onChange={handleChange}
-      value={formData.subImage}
+      // value={formData.subImage}
       />
-  </div>
+  </div> */}
   <div className="col-12">
-    <button type="submit" className="btn button-color fw-semibold">upload</button>
+  <button type="submit" className='btn button-color fw-semibold my-4' disabled={isLoading}>
+        {isLoading ? 'Loading...' : 'Upload'}
+      </button>
   </div>
 </form>
     </div>
@@ -173,3 +220,4 @@ useEffect(()=>{
 }
 
 export default Admin
+
