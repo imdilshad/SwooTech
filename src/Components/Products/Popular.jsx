@@ -19,7 +19,7 @@ const Popular = () => {
     useEffect(()=>{
        const fetch= async()=>{
         try {
-            let response=await axios.get('https://ecommbackend-f6t0.onrender.com/api/v1/product/?page=1&limit=10').then(res=>res.data)
+            let response=await axios.get('/api/v1/product/?page=1&limit=10').then(res=>res.data)
             
              setProducts(response.data.products)
              

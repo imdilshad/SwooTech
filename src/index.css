@@ -36,6 +36,15 @@
   transition: o.7s ease;
 
 }
+.adminTable{
+  background: #329e0e;
+ color: #fff;
+ border: none;
+}
+.adminTable:hover{
+  background: linear-gradient(90deg, #329e0e 0%, rgba(53,121,9,1) 40%, rgb(2, 95, 2) 100%);
+  transition: o.7s ease;
+}
 .about-salesman{
   background-color: rgb(238, 234, 234);
   border-radius: 10px;

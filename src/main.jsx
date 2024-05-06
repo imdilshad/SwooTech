@@ -15,7 +15,7 @@ import { Provider } from 'react-redux'
 import About from './Components/About/About.jsx'
 import SingleProductMain from './Components/sumsung/SingleProductMain.jsx'
 import Profile from './Components/Profile/Profile.jsx'
-import Admin from './Admin.jsx'
+// import Admin from './Admin.jsx'
 import store from './Store/Store'
 
 

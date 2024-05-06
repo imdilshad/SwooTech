@@ -65,7 +65,7 @@ import { addUser } from '../../Store/UserSlice';
             dispatch(addUser(data.data.user));
             if(data.message=='User logged in Successfully'){
               if(data.data.user.role=='ADMIN'){
-                navigate('/admin')
+                navigate('/adminDashboard')
               }
               else{
                 navigate('/')

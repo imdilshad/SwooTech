@@ -80,7 +80,7 @@ function Header2() {
             </NavDropdown>
 
             <NavLink  className='nav-link' to={"/Contact"}>CONTACT</NavLink>
-            {User?.role=="ADMIN"?<NavLink  className='nav-link' to={"/admin"}>Admin</NavLink> :''}
+            {User?.role=="ADMIN"?<NavLink  className='nav-link' to={"/adminDashboard"}>Admin</NavLink> :''}
             {token?<button className='d-md-none nav-link' onClick={handleLogout}>Log Out</button>:<div>
               <NavLink className='d-md-none nav-link' to={"/login"}>Login</NavLink>
             <NavLink className='d-md-none nav-link' to={"/signup"}>Sign UP</NavLink>

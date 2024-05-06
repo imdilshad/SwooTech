@@ -18,9 +18,11 @@ import Contact from './Components/Contact/Contact';
 import Phonetab from './Components/Products/Phonetab';
 import Footer from './Components/Footer/Footer';
 import Multipage from './Components/Products/Multipage';
-import Admin from './Admin';
+import CreateProduct from './Admin/AdminProduct/CreateProduct';
 import { useEffect } from 'react';
 import axios from 'axios';
+import AdminDashboard from './Admin/AdminDashboard';
+import AllProducts from './Admin/AdminProduct/AllProducts';
 
 
 function App() {
@@ -53,7 +55,10 @@ try {
           <Route path="/Login" element={<Login/>} />
           <Route path="/signup" element={<Registration/>} />
           <Route path="/Multipage" element={<Multipage/>} />
-          <Route path="/admin" element={<Admin/>} />
+          <Route path="/adminDashboard/products/createProduct" element={<CreateProduct/>} />
+          <Route path="/adminDashboard" element={<AdminDashboard/>} />
+          <Route path="/adminDashboard/products" element={<AllProducts/>} />
+          <Route path="*" element={<div>Page not found</div>} />
         </Routes>
         <Footer/>
     
