@@ -52,6 +52,7 @@ try {
           <Route path="/about" element={<About/>} />
           <Route path="/cart" element={localToken ? <CartMain/>:<Navigate to={'/login'} />} />
           <Route path="/products" element={<Phonetab/>} />
+          <Route path="/products/:id" element={<SingleProductMain/>} />
           <Route path="/Login" element={<Login/>} />
           <Route path="/signup" element={<Registration/>} />
           <Route path="/Multipage" element={<Multipage/>} />

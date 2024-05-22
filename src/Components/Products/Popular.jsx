@@ -9,13 +9,18 @@ import p4 from '../images/popularimages/7 → Link → prod10.png@2x.png'
 import product from './product'
 import axios from 'axios'
 import { useEffect } from 'react'
+import {useDispatch} from 'react-redux'
+import { addCart } from '../../Store/CartSlice'
+import { useParams ,Link} from 'react-router-dom'
 
 
 
 const Popular = () => {
 
     const[products,setProducts]=useState([])
-    
+    const dispatch=useDispatch()
+    const {id}=useParams
+    console.log('this is the id',id)
     useEffect(()=>{
        const fetch= async()=>{
         try {
@@ -47,7 +52,7 @@ const Popular = () => {
 
                         <div className='row'>
                         <div className='  '>
-                            <button className='btn text-white bg-success w-100 px-3'>save $59.00</button>
+                            <button className='btn button-color w-100 px-3'>save $59.00</button>
 
                         </div>
                         
@@ -62,8 +67,13 @@ const Popular = () => {
                         </div>
                             <h4>{product.name}</h4>
                             <h5 className='text-danger py-2'>${product.price}</h5>
-                        
-                            <span className=' text-success'>FREE SHIPPING</span>
+                        <div className='d-flex justify-content-between  px-2 w-100'>
+                            <button className='btn button-color'onClick={()=>{
+                                dispatch(addCart(product))
+                            }} >Add</button>
+                           <Link to={`/products/${product._id}`}> <button className='btn button-color'>Buy</button></Link>
+                        </div >
+                            <span className=' text-color'>FREE SHIPPING</span>
                             <span>❌ out of stock</span>
                         
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import img1 from "../sumsung/1.png";
 import img2 from "../sumsung/2.png";
 import img3 from "../sumsung/3.png";
@@ -11,8 +11,30 @@ import campare from "../sumsung/compare.png";
 import pay from "../sumsung/pay.png.png";
 import car from "../sumsung/carlogo.png";
 import "../sumsung/sumsung.css";
+import { useLocation, useParams } from "react-router-dom";
+import axios from 'axios'
 
 export default function AppSumsung() {
+  const[products,setProducts]=useState([])
+  const {id}=useParams()
+  
+
+ 
+ 
+  useEffect(()=>{
+    const fetch= async()=>{
+     try {
+         let response=await axios.get(`/api/v1/product/${id}`).then(res=>res.data)
+         console.log(response)
+          setProducts(response.data)
+          
+         } catch (error) {
+             console.log('this is error',error)
+         }
+     }
+     fetch()
+ } ,[])
+ console.log(products)
   const [number, setNumber] = useState(1);
   const increment = () => {
     setNumber(number + 1);
@@ -24,7 +46,7 @@ export default function AppSumsung() {
           <button className="new-btn ms-5  mt-5 ">New</button>
           <button className="croos5 mt-5 me-3 "></button>
         </div>
-        <img className="w-100" src={img1} alt="a" />
+        <img className="w-100" src={products?.mainImage?.url} alt="a" />
         <div className="row">
           <img className="sumsung-image" src={img1} alt="a" />
           <img className="sumsung-image" src={img2} alt="a" />
@@ -35,10 +57,10 @@ export default function AppSumsung() {
       <div className="col-md-5">
         <div className="mt-5 col ms-2">
           <div>
-            <h6>Somseng Galatero X6 Ultra LTE 4G/128GB, Black Smartphone</h6>
+            <h3>{products.name}</h3>
           </div>
           <div>
-            <h5>$569.00 - $609.00</h5>
+            <h5>${products.price}</h5>
           </div>
           <div>
             <ul>

@@ -20,6 +20,7 @@ function Header2() {
   const token =localStorage.getItem('acessToken')
   // console.log(token)
   const userData=useSelector((state)=>state.User)
+  const Items=useSelector((state)=>state.Cart)
  
   const  [User] =userData
   const navigate=useNavigate()
@@ -80,7 +81,7 @@ function Header2() {
             </NavDropdown>
 
             <NavLink  className='nav-link' to={"/Contact"}>CONTACT</NavLink>
-            {User?.role=="ADMIN"?<NavLink  className='nav-link' to={"/adminDashboard"}>Admin</NavLink> :''}
+            {User?.role=="ADMIN"?<NavLink  className='nav-link' to={"/adminDashboard"}>ADMIN</NavLink> :''}
             {token?<button className='d-md-none nav-link' onClick={handleLogout}>Log Out</button>:<div>
               <NavLink className='d-md-none nav-link' to={"/login"}>Login</NavLink>
             <NavLink className='d-md-none nav-link' to={"/signup"}>Sign UP</NavLink>
@@ -119,7 +120,7 @@ function Header2() {
          
         <NavLink to={'/cart'} className='d-none d-md-block'> <button className="btn text-dark  ">
             <i className="fa-solid fs-3 fa-cart-shopping"></i>
-            <span className="badge bg-dark rounded-pill ">0</span>
+            <span className="badge bg-dark rounded-pill ">{Items.length}</span>
             </button></NavLink>
           <span className='mx-2  Navbar-topLine'>
             <p>cart <br />

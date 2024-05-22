@@ -30,7 +30,7 @@ export default function AppFrequent() {
               <img src={img3} alt="a" height={170} width={170} />
             </div>
           </div>
-          <div className="col-md-2">
+          {/* <div className="col-md-2">
             <h6 className="text-secondary fs-6 mb-2">TOTAL PRICE</h6>
             <h3>
               <b>$609.00</b>
@@ -43,7 +43,7 @@ export default function AppFrequent() {
                 <img src={cartsymbol} alt="a" />
                 <span> Ad all to Wishlist</span>
             </div>
-          </div>
+          </div> */}
           <div className="row w-100 mt-5 ">
             <span className="w-100 d-flex">
               {" "}

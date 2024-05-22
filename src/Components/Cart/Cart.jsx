@@ -4,63 +4,71 @@ import img2 from "../Cart/cart2.png";
 import img3 from "../Cart/cart3.png";
 import Symbol from "../Cart/Symbol.png";
 import "./Cart.css";
+import {useSelector,useDispatch} from 'react-redux'
+import {Link} from 'react-router-dom'
+import { removeCart } from "../../Store/CartSlice";
+
 
 export default function AppCart() {
-  const [number, setNumber] = useState(1);
-  const increment = () => {
-    setNumber(number + 1);
-  };
+  const [quantity, setQuantity] = useState(1);
+  const dispatch=useDispatch()
+  const handleRemove=(productId)=>{
+    dispatch(removeCart(productId))
+   }
+  const products=useSelector((state)=>state.Cart)
   return (
     <>
-      <div className="row ">
+      <div className="row container-fluid">
   
-        <div className="contain row col-md-8">
-          <div className="col-md-4 me-5 ">
-            <button className="btn1  ">save $199.00</button>
-            <img
-              src={img3}
-              className="card-img-top"
-              alt="a"
-              style={{ height: 400, width: 400 }}
-            />
-          </div>
-          <div className="card-body col-md-4 d-flex flex-column justify-content-center align-items-start ms-5">
-            <p className="card-text">
-              SROK Smart Phone <br /> 128GB , Oled Retina
-            </p>
-            <h5 className="text-danger mb-3">$579.00</h5>
-            <div className="page-btn d-flex">
-              <button
-                className="btn bg-white text-black "
-                onClick={() => {
-                  if (number > 1) setNumber(number - 1);
-                }}
-              >
-                -
-              </button>
-              <button className="btn bg-white text-black">{number}</button>
-              <button
-                className="btn bg-white text-black"
-                onClick={() => {
-                  setNumber(number + 1);
-                }}
-              >
-                +
-              </button>
-            </div>
-            <div>
-              <button className="freshop ">Free shopping</button>
-            </div>
-            <div className="mt-3">
-              <img src={Symbol} alt="a" />
-              <span> in stock</span>
-            </div>
-          </div>
-          <div className="col-md-2 d-flex">
-            <div className="cross1 me-2"></div>
-            <div className="cross"></div>
-          </div>
-        </div>
+      <div className='container-fluid  text-white col-md-8   py-4'>
+      <h1 className='mb-md-3 text-dark'>Shopping Cart</h1>
+      <div className="row gap-1 d-md-flex justify-content-evenly px-2 " >
+        {products.map(product=>{
+           return <div className="col-md-5 mb-3 text-white  rounded py-3 px-3" style={{border:'1px solid #37b60e'}} key={product._id} >
+           <div className='d-flex justify-content-between'>
+             <h5>orders</h5>
+             <button className='text-black btn' onClick={()=>{
+              dispatch(removeCart(product._id))}}>
+            <i className="fa-solid fa-xmark"></i>
+            </button>
+           </div>
+           <div className='d-flex '>
+             <div className="col-5"><img src={product.mainImage.url} className='rounded w-100 mb-2 cart-image' alt="" /></div>
+             <div className="col-7   px-3">
+               <div className='w-100 mb-3 text-start'>
+               {/* <h5 className=''>Steel Dumble</h5> */}
+               <h4 className=' w-100 checkout text-black' >{product.name}</h4>
+               </div>
+              <div className='d-flex flex-column justify-content-start align-items-start'>
+              <div className='d-flex justify-content-between px-2 w-100 text-black'>
+                 <span >
+                   Items price:
+                 </span>
+                 <span className='text-end'>
+                 ₹ {product.price}
+                 </span>
+               </div>
+               <div className='d-flex  border my-2'  key={product._id}>
+               <button className='border px-2 fa-solid fa-minus' onClick={()=>{
+                 if(quantity>1){
+                  setQuantity(quantity-1)
+                }
+                }}></button>
+                 <button className='border px-2'>{quantity}</button>
+                <button className='border px-2 fa-solid fa-plus' onClick={()=>{
+                 setQuantity(quantity+1)
+                }}>
+                </button>
+                
+               </div>
+              </div>
+             </div>
+           </div>
+         </div>
+        })}
+      </div>
+    </div>
+    
 
         <div className="row mb-3  col-md-4 border border-2 border-success rounded justify-item  contaiber-fluid ">
          <div className="container justify-item flex-column text-start  gap-5">

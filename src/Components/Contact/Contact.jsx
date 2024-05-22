@@ -24,12 +24,12 @@ const Contact = () => {
 
                 <label for="exampleInputEmail1" class="form-label">First Name</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder='Mark' />
+                  placeholder='Dilshad' />
               </div>
               <div className='col-md-6 '>
                 <label for="exampleInputEmail1" class="form-label">Last Name</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder='cole' />
+                  placeholder='Khan' />
 
 
               </div>
@@ -40,7 +40,7 @@ const Contact = () => {
               <div className='my-3 '>
                 <label for="exampleInputEmail1" class="form-label">Phone numbe <span className='te'>(optional)</span></label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder='+1 0231 4554 452' /></div>
+                  placeholder='+91 7976717054' /></div>
               <div className='my-2'>
                 <select class="form-select" aria-label="Default select example">
                   <option selected>India</option>
