@@ -58,27 +58,14 @@ function Header2() {
               <NavDropdown.Item href="#action/3.1">
               <NavLink className='nav-link' to={'/about'}>About</NavLink>
                 </NavDropdown.Item>
-              <NavDropdown.Item href="/phonetab">
-              <NavLink className='nav-link' to={'/about'}>New</NavLink>
-              </NavDropdown.Item>
+             
               <NavDropdown.Item href="/cart">
               <NavLink className='nav-link' to={'/cart'}>Cart</NavLink>
                 </NavDropdown.Item>
              
             </NavDropdown>
 
-            <NavDropdown title="PRODUCTS" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/phonetab">
-              <NavLink className='nav-link' to={'/products'}>mobile</NavLink>
-                </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-               
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/product">
-              <NavLink className='nav-link' to={'/single'}>single page</NavLink>
-              </NavDropdown.Item>
-             
-            </NavDropdown>
+            <NavLink className='nav-link' to={'/products'}>PRODUCTS</NavLink>
 
             <NavLink  className='nav-link' to={"/Contact"}>CONTACT</NavLink>
             {User?.role=="ADMIN"?<NavLink  className='nav-link' to={"/adminDashboard"}>ADMIN</NavLink> :''}
