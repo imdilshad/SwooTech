@@ -65,7 +65,10 @@ const Popular = () => {
                         <div className='text-center'>
                             <span className='text-secondary'>({product.stock})</span>
                         </div>
-                            <h4>{product.name}</h4>
+                        <Link className='text-black text-decoration-none' to={`/products/${product._id}`}>
+
+                            <h4 >{product.name}</h4>
+                        </Link>
                             <h5 className='text-danger py-2'>${product.price}</h5>
                         <div className='d-flex justify-content-between  px-2 w-100'>
                             <button className='btn button-color'onClick={()=>{
@@ -75,12 +78,6 @@ const Popular = () => {
                         </div >
                             <span className=' text-color'>FREE SHIPPING</span>
                             <span>❌ out of stock</span>
-                        
-
-
-
-
-
                     </div>
 
 
