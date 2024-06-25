@@ -172,20 +172,20 @@ export default function AppSumsung() {
 
       <div className=" col-md-2 ">
         <div className="side-bar w-100 ">
-          <div className="mt-5 ms-5 ">
-            <h6 className=" text-secondary ">TOTAL PRICE:</h6> <h3>$609.00</h3>
+          <div className="pt-5 ms-5 ">
+            <h6 className=" text-secondary ">TOTAL PRICE:</h6> <h3>${products.price}</h3>
           </div>
-          <div className="mt-4 ms-4">
+          {/* <div className="mt-4 ms-4">
             <img className="side5" src={img5} alt="a" />
             <b className="text-danger">$49/m</b> in 12 months{" "}
             <a href="www.google.com">more</a>
-          </div>
+          </div> */}
           <hr />
           <div className="mt-3 ms-5">
             <img src={Symbol} alt="a" />
             <span> in stock</span>
           </div>
-          <div className="page-btn d-flex w-75 mt-4 ms-4 bg-white">
+          <div className="page-btn d-flex w-75 mt-4 ms-4 bg-white justify-item justify-content-evenly">
             <button
               className="btn bg-white text-black "
               onClick={() => {
@@ -219,21 +219,21 @@ export default function AppSumsung() {
           </div>
           <hr />
 
-          <div className="ms-2 mb-2">
+          <div className="py-2 px-1">
             <h6>Guaranteed Safe Checkout</h6>
-            <img className="" src={pay} alt="a" height={30} width={200} />
+            <img className="w-100" src={pay} alt="a" height={30}  />
           </div>
         </div>
 
-        <div className="side-bar mt-2 h-25 w-100">
-          <button className="quick-order-btn mt-5 ms-4">
+        <div className="side-bar mt-2 h-25 justify-item flex-column w-100">
+          <button className="btn text-white my-3" style={{backgroundColor:'rgb(83, 79, 79)'}}>
             Quick Order 24/7
           </button>
-          <h3 className="mt-3 ms-4">(025) 3886 25 16</h3>
-        </div>
-        <div className="d-flex flex-row">
-          <img src={car} alt="a" />
+          <span className="">(025) 3886 25 16</span>
+          <div className="d-flex">
+          <img src={car} alt="a" height={15} />
           <h6 className="ms-3">Ships from United States</h6>
+          </div>
         </div>
       </div>
     </div>
